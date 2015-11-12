@@ -28,6 +28,7 @@
     switch (payload.actionType) {
       case "POKEMONS_RECEIVED":
         PokemonStore.resetPokemons(payload.pokemons);
+        PokemonStore.changed();
         break;
     }
   });
