@@ -22,9 +22,13 @@ var PokemonDetail = React.createClass({
 },
 
   render: function() {
-                  // <ToysIndex toys={this.state.pokemon.toys} />
+    var toys;
     var details;
     if (typeof this.state.pokemon !== "undefined"){
+
+      if (typeof this.state.pokemon.toys !== "undefined") {
+        toys = <ToysIndex toys={this.state.pokemon.toys} />;
+      }
 
       details = <div>
                   <img src={this.state.pokemon.image_url}/>
@@ -41,6 +45,7 @@ var PokemonDetail = React.createClass({
         <div className="detail">
         {details}
         </div>
+        {toys}
       </div>
     );
   }
