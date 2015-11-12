@@ -82,6 +82,7 @@ ul {
 }
 
 .new-pokemon, .detail {
+  right: 5px;
   padding: 10px;
   border: thick yellow dotted;
 }
